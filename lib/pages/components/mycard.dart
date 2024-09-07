@@ -24,7 +24,7 @@ class My_Card extends StatelessWidget
             height: mdh*0.14,
             width: mdw*0.24,
             padding: EdgeInsets.all(10),
-            child: Obx(()=>CircleAvatar(backgroundImage: NetworkImage("${arr[ind]['picture']['medium']}"),radius: 56,),),
+            child: Obx(()=>Hero(tag: "${arr[ind]['email']}", child: CircleAvatar(backgroundImage: NetworkImage("${arr[ind]['picture']['medium']}"),radius: 56,),),),
             decoration: BoxDecoration(
                 color: CupertinoColors.activeBlue,
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20))

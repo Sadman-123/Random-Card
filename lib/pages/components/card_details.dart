@@ -42,11 +42,11 @@ class CardDetails extends StatelessWidget {
                          left: mdw*0.281,
                          bottom: mdh*0.322,
                          top: -mdh*0.096, // Positioning the CircleAvatar to overflow
-                         child: CircleAvatar(
+                         child: Hero(tag: "${arr[ind]['email']}", child: CircleAvatar(
                            backgroundImage:
                            NetworkImage("${arr[ind]['picture']['medium']}"),
                            radius: 60,
-                         ),
+                         ),)
                        ),
                      ],
                    ),

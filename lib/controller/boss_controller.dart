@@ -9,11 +9,10 @@ class BossController extends GetxController{
     super.onInit();
     getData();
   }
-  void getData() async
-  {
-    var uri=Uri.parse("https://randomuser.me/api/?results=10");
-    var res=await http.get(uri);
-    var data=jsonDecode(res.body);
+  void getData() async {
+    var uri = Uri.parse("https://randomuser.me/api/?results=10");
+    var res = await http.get(uri);
+    var data = jsonDecode(res.body);
     arr.assignAll(data['results']);
   }
 }
