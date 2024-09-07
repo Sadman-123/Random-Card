@@ -24,7 +24,7 @@ class My_Card extends StatelessWidget
             height: mdh*0.14,
             width: mdw*0.24,
             padding: EdgeInsets.all(10),
-            child: CircleAvatar(backgroundImage: NetworkImage("${arr[ind]['picture']['medium']}"),radius: 56,),
+            child: Obx(()=>CircleAvatar(backgroundImage: NetworkImage("${arr[ind]['picture']['medium']}"),radius: 56,),),
             decoration: BoxDecoration(
                 color: CupertinoColors.activeBlue,
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20))
@@ -42,7 +42,7 @@ class My_Card extends StatelessWidget
               child: Column(
                 children: [
                   Obx(()=>Text("${arr[ind]['name']['first']}",style: TextStyle(fontSize: mdw*0.077),),),
-                  Text("${arr[ind]['phone']}",style: TextStyle(fontSize: mdw*0.047),)
+                  Obx(()=>Text("${arr[ind]['phone']}",style: TextStyle(fontSize: mdw*0.047),)),
                 ],
               ),
             ),
